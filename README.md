@@ -1,4 +1,4 @@
-# API RESTful em PHP
+# API RESTful em PHP (Em desenvolvimento)
 Este projeto foi idealizado apenas para fazer parte do meu portfólio como demonstração de experiência e aprendizado.
 
 ### O que é este projeto?

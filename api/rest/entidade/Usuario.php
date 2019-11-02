@@ -21,7 +21,7 @@ class Usuario{
 	protected $oConexao;
 
 	public function __construct($oConexao){
-        $this->oConexao = $oConexao;
+		$this->oConexao = $oConexao;
     }
 	
 	public function getIdUsuario(){
