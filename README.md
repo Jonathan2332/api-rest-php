@@ -5,8 +5,9 @@ Este projeto foi idealizado apenas para fazer parte do meu portfólio como demon
 
 API RESTful criada em PHP para integração do banco de dados do projeto **98 Movies** em diferentes versões:
 
-[98 Movies - **PHP**](https://github.com/Jonathan2332/98-movies-php)
-[98 Movies - **Angular**](https://github.com/Jonathan2332/98-movies-angular)
+98 Movies - [**PHP**](https://github.com/Jonathan2332/98-movies-php)
+
+98 Movies - [**Angular**](https://github.com/Jonathan2332/98-movies-angular)
 
 ### O que foi utilizado:
 
