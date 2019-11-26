@@ -25,7 +25,7 @@ class Conexao {
 		return $ultimoid ? $ultimoid : $resultado;
 	}	
 	
-	public function recuperarTodos($sql)
+	public function recuperarDados($sql)
 	{
 		$this->conectar();
 		$resultado = $this->conexao->query($sql)->fetchAll(PDO::FETCH_ASSOC);
