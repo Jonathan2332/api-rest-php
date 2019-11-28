@@ -72,14 +72,17 @@ class Favorito{
 		return $oConexao->recuperarDados($sql);
 	}
 
-	public function verificarFilme($idFilme, $idUsuario){
+	public function verificarFilme(){
 	
-		$sql = "select * from favorito where idFilme = $idFilme and idUsuario = $idUsuario";
+		$sql = "select * from favorito where idFilme = {$this->getIdFilme()} and idUsuario = {$this->getIdUsuario()}";
 		
 		$oConexao = new Conexao();
 		$favoritos = $oConexao->recuperarDados($sql);
 		
-		return $favoritos;
+		if(!empty($favoritos))
+			return true;
+		else
+			return false;
 	}
 }
 ?>

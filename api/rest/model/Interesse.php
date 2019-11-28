@@ -71,14 +71,17 @@ class Interesse{
 		return $oConexao->recuperarDados($sql);
 	}
 
-	public function verificarFilme($idFilme, $idUsuario){
+	public function verificarFilme(){
 	
-		$sql = "select * from interesse where idFilme = $idFilme and idUsuario = $idUsuario";
+		$sql = "select * from interesse where idFilme = {$this->getIdFilme()} and idUsuario = {$this->getIdUsuario()}";
 		
 		$oConexao = new Conexao();
 		$interesses = $oConexao->recuperarDados($sql);
 		
-		return $interesses;
+		if(!empty($interesses))
+			return true;
+		else
+			return false;
 	}
 }
 ?>

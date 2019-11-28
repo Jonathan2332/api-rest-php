@@ -39,5 +39,12 @@ class InteresseControl {
 		$oInteresse = new Interesse();
 		return $oInteresse->recuperarTodos();
 	}
+	function checkMovie($dados){
+
+		$oInteresse = new Interesse();
+		$oInteresse->setIdFilme($dados['idFilme']);
+		$oInteresse->setIdUsuario($dados['idUsuario']);
+		return $oInteresse->verificarFilme();
+	}
 }
 ?>

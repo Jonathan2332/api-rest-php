@@ -39,5 +39,13 @@ class FavoritoControl {
 		$oFavorito = new Favorito();
 		return $oFavorito->recuperarTodos();
 	}
+
+	function checkMovie($dados){
+
+		$oFavorito = new Favorito();
+		$oFavorito->setIdFilme($dados['idFilme']);
+		$oFavorito->setIdUsuario($dados['idUsuario']);
+		return $oFavorito->verificarFilme();
+	}
 }
 ?>
