@@ -84,12 +84,14 @@ class Foto
 	}
 
 	public function excluir($idUsuario){
+
+		$check = $this->checkExist($idUsuario);
 	
 		$sql = "delete from foto where idUsuario = $idUsuario;";
 		$oConexao = new Conexao();
 		$resultado = $oConexao->executar($sql);
 
-		$file = empty($resultado) ? '' : '../../../../98movies/res/imgs/usuario/upload/' . $resultado[0]['caminho'];
+		$file = empty($check) ? null : '../../../../98movies/res/imgs/usuario/upload/' . $check[0]['caminho'];
 
 		return file_exists($file) ? unlink($file) : $resultado;
 	}
